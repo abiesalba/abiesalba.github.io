@@ -11,9 +11,15 @@
   <script>
     var words = [];
     var counter = 0;
-    if(document.getElementById('button').clicked == true) {
-      words[counter] = document.getElementById('word').value; 
-      console.log(words[counter]);
+     function addWord(){
+	       words[counter] =  document.getElementById("button").value;
+       console.log(words[counter]);
+	    }   
+    
+	    // get reference to button
+	    var btn = document.getElementById("button");
+	    // add event listener for the button, for action "click"
+	    btn.addEventListener("click", addWord);
     }
 </script>
 </head>
