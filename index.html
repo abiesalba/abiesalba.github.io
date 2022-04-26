@@ -11,6 +11,7 @@
   <script>
     var words = [];
     var counter = 0;
+	  
      function addWord(){
 	       words[counter] =  document.getElementById("button").value;
        console.log(words[counter]);
@@ -19,6 +20,21 @@
     var btn = document.getElementById("button");
     // add event listener for the button, for action "click"
     btn.addEventListener("click", addWord);
+	  
+	function generateRandom(maxLimit = 100){
+  let rand = Math.random() * maxLimit;
+  console.log(rand);
+
+  rand = Math.floor(rand);
+
+  return rand;
+}
+	function generateResult() {
+		var number = generateRandom(counter);
+		document.getElementById("result").innerHTML = words[number];
+	}
+	  var btnResult = document.getElementById("getResult");
+    btnResult.addEventListener("click", generateResult);
 </script>
 </head>
  
@@ -28,5 +44,9 @@
     <input type="text" id="word" name="word"><br><br>
     <input type="button" id="button" value="Push the button">
 	 <input type="button" id="getResult" value="Get some clever thing...">
+	 
+
+	 <div id="result">
+	 </div>
   </body>
 </html>
