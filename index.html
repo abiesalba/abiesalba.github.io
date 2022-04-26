@@ -13,12 +13,14 @@
    <h1> U aren't Welcomed here... </h1>
    
     <input type="text" id="word" name="word"><br><br>
-    <input type="button" value="Push the button">
+    <input type="button" id="button" value="Push the button">
   </body>
 </html>
 <script>
-  if(document. getElementById('button'). clicked == true)
-{
-alert("button was clicked");
+  var words = [];
+  var counter = 0;
+  if(document. getElementById('button'). clicked == true) {
+    words[counter] = document. getElementById('word').value; 
+    alert(words[counter]);
 }
 </script>
