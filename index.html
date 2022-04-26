@@ -14,12 +14,11 @@
      function addWord(){
 	       words[counter] =  document.getElementById("button").value;
        console.log(words[counter]);
-	    }   
-    
-	    // get reference to button
-	    var btn = document.getElementById("button");
-	    // add event listener for the button, for action "click"
-	    btn.addEventListener("click", addWord);
+    }       
+    // get reference to button
+    var btn = document.getElementById("button");
+    // add event listener for the button, for action "click"
+    btn.addEventListener("click", addWord);
     }
 </script>
 </head>
@@ -29,5 +28,6 @@
    
     <input type="text" id="word" name="word"><br><br>
     <input type="button" id="button" value="Push the button">
+	 <input type="button" id="getResult" value="Get some clever thing...">
   </body>
 </html>
